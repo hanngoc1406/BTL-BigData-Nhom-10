@@ -22,7 +22,7 @@ hdfs dfs -mkdir /diabetes-input
 hadoop fs -put diabetes_hadoop.csv /diabetes-input
 ```
 
-- Bước 5: Bước 5: Chạy chương trình Training/Test bộ dữ liệu
+- Bước 5: Chạy chương trình Training/Test bộ dữ liệu
 ```
 hadoop jar NaiveBayes.jar NaiveBayesTrainJob -D num_mappers="3" -D num_reducers="1" -D delimiter="," -D input="/diabetes-input/diabetes_hadoop.csv" -D output="/outputdiabetes-train" -D continousVariables="1,2,3,4,5,6,7,8" -D targetVariable="9" -D numColumns="9"
 ```
