@@ -37,7 +37,7 @@ y_pred = nb.predict(X_test)
 
 # Tính độ chính xác của mô hình
 accuracy = accuracy_score(y_test, y_pred)
-print("\n \n \n \n Độ chính xác:", accuracy*100, "\n \n")
+print("\n \nAccuracy: {:.2f} \n \n".format(accuracy))
 
 # Xuất file đã được xử lý cho csv cho hadoop
 dataset.to_csv('diabetes_hadoop.csv', header=False, index=False)
